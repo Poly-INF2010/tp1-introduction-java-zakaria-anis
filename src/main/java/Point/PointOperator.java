@@ -11,7 +11,8 @@ public final class PointOperator {
      * @param translateVector Translation to apply
      */
     public static void translate(Double[] vector, Double[] translateVector) {
-
+        vector[0]+=translateVector[0];
+        vector[1]+=translateVector[1];
     }
 
     /** TODO
