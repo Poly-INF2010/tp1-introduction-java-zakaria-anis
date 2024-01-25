@@ -58,7 +58,7 @@ public class Point2d extends AbstractPoint {
      */
     @Override
     public Point2d rotate(Double[][] rotationMatrix) {
-        PointOperator.rotate(this.vector,rotationMatrix);
+        PointOperator.rotate(vector,rotationMatrix);
         return this;
     }
 
