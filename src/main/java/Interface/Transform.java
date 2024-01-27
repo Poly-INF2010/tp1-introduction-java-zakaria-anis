@@ -4,6 +4,8 @@ import Point.Point2d;
 
 import java.util.Collection;
 
+
+
 public class Transform implements Rotate, Translate{
     /** TODO
      * Rotate all points of collections given in parameters
@@ -12,6 +14,7 @@ public class Transform implements Rotate, Translate{
      * @param angle
      * @return rotated collection
      * */
+    @Override
     public Collection<Point2d> rotate(Collection<Point2d> coords, Double angle) {
         for(Point2d point:coords)
             point.rotate(angle);
@@ -24,6 +27,7 @@ public class Transform implements Rotate, Translate{
      * @param translateVector Vector of translation
      * @return translated coords
      * */
+    @Override
     public Collection<Point2d> translate(Collection<Point2d> coords, Point2d translateVector) {
         for (Point2d point:coords)
             point.translate(translateVector);
