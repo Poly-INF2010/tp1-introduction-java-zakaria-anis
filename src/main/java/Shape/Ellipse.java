@@ -11,7 +11,15 @@ public class Ellipse extends BaseShape {
      * @param heightDiameter Height of the Ellipse
      */
     public Ellipse(Double widthDiameter, Double heightDiameter) {
+        double maxX = widthDiameter/2;
+        for (double x = -maxX; x < maxX; x+=0.5) {
 
+            double maxY = Math.sqrt(Math.pow(heightDiameter/2,2)* (1 - (Math.pow(x,2)/Math.pow(widthDiameter/2, 2))));
+
+            for (double y = -maxY;y < maxY; y+=0.5) {
+                this.add(new Point2d(x,y));
+            }
+        }
     }
 
     /** TODO
