@@ -18,9 +18,19 @@ public final class LetterFactory {
      * @return BaseShape containing the letter A
      */
     public static BaseShape create_A()  {
-        Square sqr = new Square(100.0);
+        BaseShape letter = new BaseShape();
 
-        return sqr;
+        Rectangle r1 = new Rectangle(20.0,110.0);
+        r1.rotate(r1.getCoords(),Math.toRadians(160));
+
+        Rectangle r2 = new Rectangle(20.0,110.0);
+        r2.rotate(r2.getCoords(),Math.toRadians(-160));
+
+
+        letter.add(r1);
+        letter.add(r2);
+
+        return letter;
     }
 
     /** TODO
@@ -131,14 +141,18 @@ public final class LetterFactory {
     public static BaseShape create_N() {
         BaseShape letter = new BaseShape();
 
-        Rectangle r1 = new Rectangle(20.0,50.0);
-        r1.rotate(r1.getCoords(),Math.PI);
+        Rectangle r1 = new Rectangle(20.0,100.0);
+        r1.rotate(r1.getCoords(),Math.toRadians(160));
+        //r1.translate(r1.getCoords(), new Point2d(0.0,.0));
 
         Rectangle r2 = new Rectangle(20.0, 150.0);
+        r2.translate(r2.getCoords(),new Point2d(52.0,0.0));
 
-
+        Rectangle r3 = new Rectangle(20.0, 150.0);
+        r3.translate(r3.getCoords(),new Point2d(-50.0,0.0));
 
         letter.add(r2);
+        letter.add(r3);
         letter.add(r1);
         return letter;
     }
