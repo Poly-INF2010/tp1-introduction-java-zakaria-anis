@@ -20,15 +20,20 @@ public final class LetterFactory {
     public static BaseShape create_A()  {
         BaseShape letter = new BaseShape();
 
-        Rectangle r1 = new Rectangle(20.0,110.0);
+        Rectangle r1 = new Rectangle(20.0,150.0);
         r1.rotate(r1.getCoords(),Math.toRadians(160));
+        r1.translate(r1.getCoords(),new Point2d(25.0,0.0));
 
-        Rectangle r2 = new Rectangle(20.0,110.0);
+        Rectangle r2 = new Rectangle(20.0,150.0);
         r2.rotate(r2.getCoords(),Math.toRadians(-160));
+        r2.translate(r2.getCoords(),new Point2d(-25.0,0.0));
 
+        Rectangle r3 = new Rectangle(50.0,15.0);
+        r3.translate(r3.getCoords(),new Point2d(0.0,15.0));
 
         letter.add(r1);
         letter.add(r2);
+        letter.add(r3);
 
         return letter;
     }
@@ -141,15 +146,15 @@ public final class LetterFactory {
     public static BaseShape create_N() {
         BaseShape letter = new BaseShape();
 
-        Rectangle r1 = new Rectangle(20.0,100.0);
-        r1.rotate(r1.getCoords(),Math.toRadians(160));
-        //r1.translate(r1.getCoords(), new Point2d(0.0,.0));
+        Rectangle r1 = new Rectangle(20.0,150.0);
+        r1.rotate(r1.getCoords(),Math.toRadians(150));
+
 
         Rectangle r2 = new Rectangle(20.0, 150.0);
-        r2.translate(r2.getCoords(),new Point2d(52.0,0.0));
+        r2.translate(r2.getCoords(),new Point2d(40.0,0.0));
 
         Rectangle r3 = new Rectangle(20.0, 150.0);
-        r3.translate(r3.getCoords(),new Point2d(-50.0,0.0));
+        r3.translate(r3.getCoords(),new Point2d(-40.0,0.0));
 
         letter.add(r2);
         letter.add(r3);
